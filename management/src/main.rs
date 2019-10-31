@@ -30,7 +30,7 @@ impl<'r> Responder<'r> for User {
             .sized_body(Cursor::new(json!(self).to_string()))
             .header(ContentType::new("application", "json"))
             .ok()
-}
+    }
 }
 
 #[post("/user/<id>")]
@@ -47,9 +47,7 @@ fn getUser(id: usize) -> User {
         age:19,
         updated:0
     }
-    //Json(u)
 }
-
 
 
 fn main() {
